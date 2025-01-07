@@ -5,9 +5,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Localization;
 
-using DG.Tweening;
-using UI.Utils;
-
 namespace SayItLabs.PopupSystem
 {
     /// <summary>
@@ -16,10 +13,6 @@ namespace SayItLabs.PopupSystem
     /// </summary>
     public abstract class BasePopup : MonoBehaviour
     {
-        [Header("Animation Variables")]
-        [SerializeField] private float animDuration = 1f;
-        [SerializeField] private Ease animEase = Ease.Linear;
-
         public RectTransform RectTransform { get; private set; }
 
         public static Action OnPopupConfirmation;
@@ -54,16 +47,12 @@ namespace SayItLabs.PopupSystem
             if (RectTransform == null)
                 return;
 
-            RectTransform.anchoredPosition = new Vector2(0f, CanvasWidthHeight.CanvasHeight);
-            RectTransform.DOAnchorPos(Vector2.zero, animDuration)
-                .SetEase(animEase);
+            gameObject.SetActive(true);
         }
 
         public void Hide()
         {
-            RectTransform.DOAnchorPos(new Vector2(0f, -CanvasWidthHeight.CanvasHeight), animDuration)
-                .SetEase(animEase)
-                .OnComplete(() => Destroy(gameObject));
+            gameObject.SetActive(false);
         }
 
         #region DEBUG
