@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UI.Popups
+namespace SayItLabs.PopupSystem
 {
     /// <summary>
     /// Simple class to hold reference to all the different types of popup and spawn them when requested.

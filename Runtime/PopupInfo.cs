@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
 
-namespace UI.Popups
+namespace SayItLabs.PopupSystem
 {
     public enum EPopupType
     {

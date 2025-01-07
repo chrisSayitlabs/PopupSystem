@@ -8,7 +8,7 @@ using UnityEngine.Localization;
 using DG.Tweening;
 using UI.Utils;
 
-namespace UI.Popups
+namespace SayItLabs.PopupSystem
 {
     /// <summary>
     /// Base Popup class which all popups should inherit from. Provides basic functionality such as animation in and out. 

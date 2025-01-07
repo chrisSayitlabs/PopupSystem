@@ -1,5 +1,5 @@
 
-namespace UI.Popups
+namespace SayItLabs.PopupSystem
 {
     public struct PopupResult
     {

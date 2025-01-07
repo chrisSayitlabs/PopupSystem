@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
 
-namespace UI.Popups
+namespace SayItLabs.PopupSystem
 {
     /// <summary>
     /// Displays a popup with room for a message and a single button to confirm. Suitable for displaying information to a player.

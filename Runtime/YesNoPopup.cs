@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Popups
+namespace SayItLabs.PopupSystem
 {
     /// <summary>
     /// Popup that can allow a user to accept or deny certain requests. 
