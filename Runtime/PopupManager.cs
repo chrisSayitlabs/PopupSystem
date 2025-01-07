@@ -74,7 +74,7 @@ namespace SayItLabs.PopupSystem
 
             currentActivePopup = Instantiate(popupDatabase[popupInfo.PopupType], transform.parent);
             currentActivePopup.InitializePopup(popupInfo);
-            InputBlocker.RequestBlock(currentActivePopup.RectTransform);
+            //InputBlocker.RequestBlock(currentActivePopup.RectTransform);
             popupResult = null;
             currentActivePopup.Show();
         }
@@ -89,7 +89,7 @@ namespace SayItLabs.PopupSystem
 
             currentActivePopup.Hide();
             currentActivePopup = null;
-            InputBlocker.RemoveBlock();
+            //InputBlocker.RemoveBlock();
         }
 
         private void RecordSuccess()
