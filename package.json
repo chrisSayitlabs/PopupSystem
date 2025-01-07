@@ -8,5 +8,10 @@
         "name": "Chris Dale",
         "email": "chris@sayitlabs.com",
         "url": ""
+    },
+    "dependencies":
+      {
+        "com.unity.localization": "1.4.5"
+      }
     }
 }
