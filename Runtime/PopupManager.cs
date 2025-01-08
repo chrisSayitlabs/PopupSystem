@@ -22,9 +22,6 @@ namespace SayItLabs.PopupSystem
         [Header("Debug")]
         [SerializeField] private PopupInfo debugPopupInfo;
 
-        [Header("Test")]
-        [SerializeField] private UnityEvent test;
-
         private BasePopup currentActivePopup = default;
         private PopupResult? popupResult;
 
