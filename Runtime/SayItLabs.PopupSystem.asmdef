@@ -1,6 +1,5 @@
 {
     "name": "SayItLabs.PopupSystem",
-    "rootNamespace": "",
     "references": [
         "Unity.TextMeshPro",
         "Unity.TextMeshPro.Editor",
