@@ -10,9 +10,8 @@
         "url": ""
     },
     "dependencies":
-      {
+    {
         "com.unity.localization": "1.4.5",
         "com.unity.textmeshpro": "3.0.9"
-      }
     }
 }
