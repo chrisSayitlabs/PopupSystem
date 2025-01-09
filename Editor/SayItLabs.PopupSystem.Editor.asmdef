@@ -1,3 +1,16 @@
 {
-	"name": "SayItLabs.PopupSystem.Editor"
+    "name": "SayItLabs.PopupSystem.Editor",
+    "rootNamespace": "",
+    "references": [
+        "SayItLabs.PopupSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
