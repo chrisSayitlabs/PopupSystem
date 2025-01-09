@@ -1,10 +1,8 @@
-using SayItLabs.PopupSystem;
 using System;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace SayItLabs.PopupSystem
+namespace SayItLabs.PopupSystem.Editor
 {
     [CustomPropertyDrawer(typeof(PopupInfo))]
     public class PopupInfoDrawer : PropertyDrawer
