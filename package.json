@@ -13,5 +13,12 @@
     {
         "com.unity.localization": "1.4.5",
         "com.unity.textmeshpro": "3.0.9"
-    }
+    },
+    "samples": [
+        {
+            "displayName": "Simple Setup",
+            "description": "Contains a simple script showing how to setup the popup system for basic use.git ",
+            "path": "Samples~/SimpleSetup"
+        }
+    ]
 }
