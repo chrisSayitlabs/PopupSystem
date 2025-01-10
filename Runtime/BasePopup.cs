@@ -15,15 +15,15 @@ namespace SayItLabs.PopupSystem
     /// </summary>
     public abstract class BasePopup : MonoBehaviour
     {
+        [Header("Animation Variables")]
+        [SerializeField] private Vector2 finalActivePosition = Vector2.zero;
         [Header("Transition In")]
         [SerializeField] private float inDuration = 1f;
         [SerializeField] private Vector2 inFrom = Vector2.zero;
-        [SerializeField] private Vector2 inTo = Vector2.zero;
         [SerializeField] private EaseType inEase = EaseType.Linear;
 
         [Header("Transition Out")]
         [SerializeField] private float outDuration = 1f;
-        [SerializeField] private Vector2 outFrom = Vector2.zero;
         [SerializeField] private Vector2 outTo = Vector2.zero;
         [SerializeField] private EaseType outEase = EaseType.Linear;
 
@@ -66,7 +66,7 @@ namespace SayItLabs.PopupSystem
             gameObject.AddTween(new AnchoredPositionTween
             {
                 from = inFrom,
-                to = inTo,
+                to = finalActivePosition,
                 duration = inDuration,
                 easeType = inEase
             });
@@ -76,7 +76,7 @@ namespace SayItLabs.PopupSystem
         {
             gameObject.AddTween(new AnchoredPositionTween
             {
-                from = outFrom,
+                from = finalActivePosition,
                 to = outTo,
                 duration = outDuration,
                 easeType = outEase
