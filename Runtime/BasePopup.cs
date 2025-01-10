@@ -5,6 +5,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Localization;
 
+using Tweens;
+
 namespace SayItLabs.PopupSystem
 {
     /// <summary>
@@ -13,6 +15,18 @@ namespace SayItLabs.PopupSystem
     /// </summary>
     public abstract class BasePopup : MonoBehaviour
     {
+        [Header("Transition In")]
+        [SerializeField] private float inDuration = 1f;
+        [SerializeField] private Vector2 inFrom = Vector2.zero;
+        [SerializeField] private Vector2 inTo = Vector2.zero;
+        [SerializeField] private EaseType inEase = EaseType.Linear;
+
+        [Header("Transition Out")]
+        [SerializeField] private float outDuration = 1f;
+        [SerializeField] private Vector2 outFrom = Vector2.zero;
+        [SerializeField] private Vector2 outTo = Vector2.zero;
+        [SerializeField] private EaseType outEase = EaseType.Linear;
+
         public RectTransform RectTransform { get; private set; }
 
         public static Action OnPopupConfirmation;
@@ -48,10 +62,25 @@ namespace SayItLabs.PopupSystem
                 return;
 
             gameObject.SetActive(true);
+
+            gameObject.AddTween(new AnchoredPositionTween
+            {
+                from = inFrom,
+                to = inTo,
+                duration = inDuration,
+                easeType = inEase
+            });
         }
 
         public void Hide()
         {
+            gameObject.AddTween(new AnchoredPositionTween
+            {
+                from = outFrom,
+                to = outTo,
+                duration = outDuration,
+                easeType = outEase
+            });
             gameObject.SetActive(false);
         }
 
