@@ -11,3 +11,6 @@ https://github.com/chrisSayitlabs/PopupSystem.git
 
 ## Get Started
 Check out the SimpleSetup sample project to see how you easily implement the system.
+
+## Suggestions
+Annoy Chris with any new features!
