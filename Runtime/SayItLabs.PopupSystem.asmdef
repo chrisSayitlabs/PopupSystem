@@ -1,11 +1,13 @@
 {
     "name": "SayItLabs.PopupSystem",
+    "rootNamespace": "",
     "references": [
         "Unity.TextMeshPro",
         "Unity.TextMeshPro.Editor",
         "Unity.TextMeshPro.Editor.Tests",
         "Unity.TextMeshPro.Tests",
-        "Unity.Localization"
+        "Unity.Localization",
+        "nl.jeffreylanters.tweens"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
