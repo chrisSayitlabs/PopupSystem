@@ -529,5 +529,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd5a6f427c8ed446be0ecd9987b3919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inDuration: 1
+  inFrom: {x: 0, y: 500}
+  inTo: {x: 0, y: 0}
+  inEase: 101
+  outDuration: 1
+  outFrom: {x: 0, y: -500}
+  outTo: {x: 0, y: 0}
+  outEase: 60
   mainBodyTxt: {fileID: 8786756401042643302}
   confirmButton: {fileID: 2229695425576061941}

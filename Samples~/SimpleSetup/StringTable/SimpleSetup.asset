@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
   m_Name: SimpleSetup
   m_EditorClassIdentifier: 
-  m_SharedTableData: {fileID: 11400000, guid: af79e9e7bd9711645834eaa128d208b5, type: 2}
+  m_SharedTableData: {fileID: 11400000, guid: 298e35218ef613245b56ca72b196bda1, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: 66b7204d40c7bb8469e4dfa8f7548005, type: 2}
+  - {fileID: 11400000, guid: 9f56c72d2aa7d8444ab0402f115fd4a8, type: 2}
   m_Extensions: []
   m_Group: String Table
   references:

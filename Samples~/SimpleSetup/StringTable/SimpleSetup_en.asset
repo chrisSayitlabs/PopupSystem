@@ -14,28 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: af79e9e7bd9711645834eaa128d208b5, type: 2}
+  m_SharedData: {fileID: 11400000, guid: 298e35218ef613245b56ca72b196bda1, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 51921440768
-    m_Localized: Yesy
+  - m_Id: 102292545536
+    m_Localized: Yes
     m_Metadata:
       m_Items: []
-  - m_Id: 79029227520
+  - m_Id: 127055716352
     m_Localized: No
     m_Metadata:
       m_Items: []
-  - m_Id: 108347412480
-    m_Localized: Ok
-    m_Metadata:
-      m_Items: []
-  - m_Id: 133974609920
-    m_Localized: This is a simple popup!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 195928674304
-    m_Localized: This is a yes/no popup!
+  - m_Id: 175759974400
+    m_Localized: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum.
     m_Metadata:
       m_Items: []
   references:

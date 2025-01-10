@@ -452,6 +452,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e0df1d9c5f75b4db63e7687a3b87a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inDuration: 1
+  inFrom: {x: 800, y: 0}
+  inTo: {x: 0, y: 0}
+  inEase: 101
+  outDuration: 1
+  outFrom: {x: 0, y: 0}
+  outTo: {x: -800, y: 0}
+  outEase: 60
   mainBodyTxt: {fileID: 2097744370885545678}
   yesButton: {fileID: 7514038599399011813}
   noButton: {fileID: 4282371554967761}

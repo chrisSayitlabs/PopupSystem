@@ -13,36 +13,32 @@ MonoBehaviour:
   m_Name: SimpleSetup Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: SimpleSetup
-  m_TableCollectionNameGuidString: af79e9e7bd9711645834eaa128d208b5
+  m_TableCollectionNameGuidString: 298e35218ef613245b56ca72b196bda1
   m_Entries:
-  - m_Id: 51921440768
+  - m_Id: 102292545536
     m_Key: Popup.Yes
     m_Metadata:
       m_Items: []
-  - m_Id: 79029227520
+  - m_Id: 127055716352
     m_Key: Popup.No
     m_Metadata:
       m_Items: []
-  - m_Id: 108347412480
+  - m_Id: 175759974400
+    m_Key: Popup.Placeholder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 457193578496
     m_Key: Popup.Ok
-    m_Metadata:
-      m_Items: []
-  - m_Id: 133974609920
-    m_Key: Popup.PlaceholderText.Simple
-    m_Metadata:
-      m_Items: []
-  - m_Id: 195928674304
-    m_Key: Popup.PlaceholderText.YesNo
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 2283135009489682511
+    rid: 2283135032258461797
   references:
     version: 2
     RefIds:
-    - rid: 2283135009489682511
+    - rid: 2283135032258461797
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1736420315210
+        m_CustomEpoch: 1736515191827

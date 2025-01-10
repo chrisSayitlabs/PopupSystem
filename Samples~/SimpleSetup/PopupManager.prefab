@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83174c0a6b3a43740bc372cb5941163c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  simplePopup: {fileID: 4909953708507984302, guid: 407c5bf4cfba3684b92a32c90485d813, type: 3}
-  yesNoPopup: {fileID: 729361074395006412, guid: 02a1e65353e641742b97c245b23f0e1d, type: 3}
+  simplePopup: {fileID: 4909953708507984302, guid: 7bee610e98a79b24cb697dde2f35a595, type: 3}
+  yesNoPopup: {fileID: 729361074395006412, guid: 6d11cd7fb13305b44bdeceec76bd8fe0, type: 3}
   debugPopupInfo:
     popupType: 0
     mainBodyText:
