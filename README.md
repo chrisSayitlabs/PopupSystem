@@ -9,6 +9,24 @@ Within the Unity Editor, go to Window > Package Manager. Click the "+" button in
 https://github.com/chrisSayitlabs/PopupSystem.git
 ```
 
+If you get errors that the "nl.jeffreylanters.tweens" cannot be found, add a scoped registery with the following info to your Packages/manifest.json file:
+
+```sh
+    "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "nl.jeffreylanters.tweens"
+      ]
+    }
+  ]
+```
+
+Alternatively, within the Editor you can add a scoped registry by going to Edit> Project Settings> Package Manager and add the following:
+
+
+
 ## Get Started
 Check out the SimpleSetup sample project to see how you easily implement the system.
 
