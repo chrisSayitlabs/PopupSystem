@@ -1,9 +1,12 @@
 ## Unreleased
 ### Features
 ### Bugfixes
-* Serialization of strings refactored to be easier to manage at scale.
 
-## 0.3.0
+## 0.5.0
+### Features
+* Reworking backend storage of strings to allow for easier management of more types of strings.
+
+## 0.4.0
 ### Features
 * Parental Gate Popup
 
