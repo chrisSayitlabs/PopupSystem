@@ -13,11 +13,13 @@ public class ShowPopuptest : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Button showSimplePopup;
     [SerializeField] private Button showYesNoPopup;
+    [SerializeField] private Button showParentalGatePopup;
     [SerializeField] private TextMeshProUGUI outputText;
 
     [Header("Popup Info")]
     [SerializeField] private PopupInfo simplePopup; 
     [SerializeField] private PopupInfo yesNoPopup;
+    [SerializeField] private PopupInfo parentalGatePopup;
 
     // Start is called before the first frame update
     void Awake()
@@ -27,6 +29,9 @@ public class ShowPopuptest : MonoBehaviour
 
         if (showYesNoPopup != null)
             showYesNoPopup.onClick.AddListener(ShowYesNoPopup);
+
+        if (showParentalGatePopup != null)
+            showParentalGatePopup.onClick.AddListener(ShowParentalGatePopup);
     }
 
     private void ShowSimplePopup()
@@ -50,6 +55,20 @@ public class ShowPopuptest : MonoBehaviour
     }
 
     private async Task AwaitYesNoPopupResponse()
+    {
+        PopupResult result = await PopupManager.Instance.AwaitInput();
+        outputText.text = result.WasSuccessful ? "Yes was pressed!" : "No was pressed!";
+        await Task.Delay(1000);
+        outputText.text = "";
+    }
+
+    private void ShowParentalGatePopup()
+    {
+        PopupManager.Instance?.CreatePopupWindow(yesNoPopup);
+        _ = AwaitYesNoPopupResponse();
+    }
+
+    private async Task AwaitParentalGatePopupResponse()
     {
         PopupResult result = await PopupManager.Instance.AwaitInput();
         outputText.text = result.WasSuccessful ? "Yes was pressed!" : "No was pressed!";

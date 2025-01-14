@@ -31,6 +31,18 @@ MonoBehaviour:
     m_Key: Popup.Ok
     m_Metadata:
       m_Items: []
+  - m_Id: 1404152439398400
+    m_Key: "Popup.ParentalGate.MainBody\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1404884030873600
+    m_Key: Popup.Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1404921632808960
+    m_Key: Popup.Cancel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

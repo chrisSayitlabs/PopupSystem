@@ -39,6 +39,18 @@ MonoBehaviour:
     m_Localized: Ok
     m_Metadata:
       m_Items: []
+  - m_Id: 1404152439398400
+    m_Localized: 'Please answer the below sum:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1404884030873600
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1404921632808960
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
