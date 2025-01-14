@@ -26,12 +26,12 @@ namespace SayItLabs.PopupSystem
         [SerializeField] private LocalizedString mainBodyText;
         public LocalizedString MainBodyText { get { return mainBodyText; } }
 
-        [SerializeField] private LocalizedString confirmationButtonLabel;
-        public LocalizedString ConfirmationButtonLabel { get { return confirmationButtonLabel; } }
-        [SerializeField] private LocalizedString yesButtonLabel;
-        public LocalizedString YesButtonLabel { get { return yesButtonLabel; } }
+        [SerializeField] private LocalizedString singleButtonLabel;
+        public LocalizedString SingleButtonLabel { get { return singleButtonLabel; } }
+        [SerializeField] private LocalizedString leftButtonLabel;
+        public LocalizedString LeftButtonLabel { get { return leftButtonLabel; } }
 
-        [SerializeField] private LocalizedString noButtonLabel;
-        public LocalizedString NoButtonLabel { get { return noButtonLabel; } }
+        [SerializeField] private LocalizedString rightButtonLabel;
+        public LocalizedString RightButtonLabel { get { return rightButtonLabel; } }
     }
 }

@@ -43,14 +43,14 @@ namespace SayItLabs.PopupSystem.Editor
                         EditorGUILayout.LabelField("Main Body");
                         EditorGUILayout.PropertyField(property.FindPropertyRelative("mainBodyText"));
                         EditorGUILayout.LabelField("Buttons");
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("confirmationButtonLabel"));
+                        EditorGUILayout.PropertyField(property.FindPropertyRelative("singleButtonLabel"));
                         break;
                     case EPopupType.YesNoPopup:
                         EditorGUILayout.LabelField("Main Body");
                         EditorGUILayout.PropertyField(property.FindPropertyRelative("mainBodyText"));
                         EditorGUILayout.LabelField("Buttons");
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("yesButtonLabel"));
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("noButtonLabel"));
+                        EditorGUILayout.PropertyField(property.FindPropertyRelative("leftButtonLabel"));
+                        EditorGUILayout.PropertyField(property.FindPropertyRelative("rightButtonLabel"));
                         break;
                 }
     

@@ -26,7 +26,7 @@ namespace SayItLabs.PopupSystem
             {
                 TextMeshProUGUI tmp = yesButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = pi.YesButtonLabel.GetLocalizedString();
+                    tmp.text = pi.LeftButtonLabel.GetLocalizedString();
                 yesButton.onClick.AddListener(() => OnPopupConfirmation());
             }
 
@@ -34,7 +34,7 @@ namespace SayItLabs.PopupSystem
             {
                 TextMeshProUGUI tmp = noButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = pi.NoButtonLabel.GetLocalizedString();
+                    tmp.text = pi.RightButtonLabel.GetLocalizedString();
                 noButton.onClick.AddListener(() => OnPopupRefuse());
             }
         }
