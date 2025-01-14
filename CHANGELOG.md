@@ -1,3 +1,9 @@
+## Unreleased
+### Features
+* Parental Gate Popup
+### Bugfixes
+* Serialization of strings refactored to be easier to manage at scale.
+
 ## 0.3.0
 ### Features
 * Update the CHANGELOG.
