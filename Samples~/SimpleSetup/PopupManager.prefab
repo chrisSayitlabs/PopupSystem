@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   simplePopup: {fileID: 4909953708507984302, guid: 7bee610e98a79b24cb697dde2f35a595, type: 3}
   yesNoPopup: {fileID: 729361074395006412, guid: 6d11cd7fb13305b44bdeceec76bd8fe0, type: 3}
+  parentalGatePopup: {fileID: 7971652740431302723, guid: 97336fc3a7f598d469e6c15665a0bbf1, type: 3}
   debugPopupInfo:
     popupType: 0
     mainBodyText:
@@ -61,7 +62,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    confirmationButtonLabel:
+    singleButtonLabel:
       m_TableReference:
         m_TableCollectionName: 
       m_TableEntryReference:
@@ -70,7 +71,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    yesButtonLabel:
+    leftButtonLabel:
       m_TableReference:
         m_TableCollectionName: 
       m_TableEntryReference:
@@ -79,7 +80,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    noButtonLabel:
+    rightButtonLabel:
       m_TableReference:
         m_TableCollectionName: 
       m_TableEntryReference:
