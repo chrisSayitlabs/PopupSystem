@@ -2,6 +2,10 @@
 ### Features
 ### Bugfixes
 
+## 0.5.1
+### Features
+* Adding in events for when popup is shown/hidden
+
 ## 0.5.0
 ### Features
 * Reworking backend storage of strings to allow for easier management of more types of strings.
