@@ -20,13 +20,13 @@ namespace SayItLabs.PopupSystem
 
         public override void InitializePopup(PopupInfo pi)
         {
-            mainBodyTxt.text = pi.MainBodyText.GetLocalizedString();
+            mainBodyTxt.text = pi.GetString(EPopupStringType.MainBodyText);
 
             if(confirmButton != null )
             {
                 TextMeshProUGUI tmp = confirmButton.GetComponentInChildren<TextMeshProUGUI>();
                 if(tmp!=null)
-                    tmp.text = pi.SingleButtonLabel.GetLocalizedString();
+                    tmp.text = pi.GetString(EPopupStringType.SingleButtonLabel);
                 confirmButton.onClick.AddListener(() => OnPopupConfirmation());
             }
         }

@@ -1052,8 +1052,8 @@ MonoBehaviour:
   outputText: {fileID: 1861015584}
   simplePopup:
     popupType: 1
-    mainBodyText:
-      m_TableReference:
+    localizedStrings:
+    - m_TableReference:
         m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
       m_TableEntryReference:
         m_KeyId: 175759974400
@@ -1061,17 +1061,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    singleButtonLabel:
-      m_TableReference:
+    - m_TableReference:
         m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
       m_TableEntryReference:
-        m_KeyId: 457193578496
+        m_KeyId: 102292545536
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    leftButtonLabel:
-      m_TableReference:
+    - m_TableReference:
         m_TableCollectionName: 
       m_TableEntryReference:
         m_KeyId: 0
@@ -1079,8 +1077,15 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    rightButtonLabel:
-      m_TableReference:
+    - m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
         m_TableCollectionName: 
       m_TableEntryReference:
         m_KeyId: 0
@@ -1090,8 +1095,8 @@ MonoBehaviour:
       m_LocalVariables: []
   yesNoPopup:
     popupType: 2
-    mainBodyText:
-      m_TableReference:
+    localizedStrings:
+    - m_TableReference:
         m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
       m_TableEntryReference:
         m_KeyId: 175759974400
@@ -1099,8 +1104,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    singleButtonLabel:
-      m_TableReference:
+    - m_TableReference:
         m_TableCollectionName: 
       m_TableEntryReference:
         m_KeyId: 0
@@ -1108,8 +1112,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    leftButtonLabel:
-      m_TableReference:
+    - m_TableReference:
         m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
       m_TableEntryReference:
         m_KeyId: 102292545536
@@ -1117,8 +1120,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    rightButtonLabel:
-      m_TableReference:
+    - m_TableReference:
         m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
       m_TableEntryReference:
         m_KeyId: 127055716352
@@ -1126,19 +1128,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-  parentalGatePopup:
-    popupType: 3
-    mainBodyText:
-      m_TableReference:
-        m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
-      m_TableEntryReference:
-        m_KeyId: 1404152439398400
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    singleButtonLabel:
-      m_TableReference:
+    - m_TableReference:
         m_TableCollectionName: 
       m_TableEntryReference:
         m_KeyId: 0
@@ -1146,8 +1136,26 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    leftButtonLabel:
-      m_TableReference:
+  parentalGatePopup:
+    popupType: 3
+    localizedStrings:
+    - m_TableReference:
+        m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
+      m_TableEntryReference:
+        m_KeyId: 1404152439398400
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
         m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
       m_TableEntryReference:
         m_KeyId: 1404884030873600
@@ -1155,11 +1163,18 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    rightButtonLabel:
-      m_TableReference:
+    - m_TableReference:
         m_TableCollectionName: GUID:298e35218ef613245b56ca72b196bda1
       m_TableEntryReference:
         m_KeyId: 1404921632808960
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    - m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0

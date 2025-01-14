@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -33,15 +32,29 @@ namespace SayItLabs.PopupSystem
         private EPopupType popupType;
         public EPopupType PopupType { get { return popupType; } }
 
-        [SerializeField] private LocalizedString mainBodyText;
-        public LocalizedString MainBodyText { get { return mainBodyText; } }
+        [SerializeField] private List<LocalizedString> localizedStrings;
 
-        [SerializeField] private LocalizedString singleButtonLabel;
-        public LocalizedString SingleButtonLabel { get { return singleButtonLabel; } }
-        [SerializeField] private LocalizedString leftButtonLabel;
-        public LocalizedString LeftButtonLabel { get { return leftButtonLabel; } }
+        public string GetString(EPopupStringType popupStringType)
+        {
+            if (localizedStrings == null)
+            {
+                Debug.LogError($"DEBUG: Localized Strings array is null!");
+                return null;
+            }
 
-        [SerializeField] private LocalizedString rightButtonLabel;
-        public LocalizedString RightButtonLabel { get { return rightButtonLabel; } }
+            if(localizedStrings.Count == 0)
+            {
+                Debug.LogError($"DEBUG: Localizes Strings array length is 0!");
+                return null;
+            }
+
+            if(localizedStrings.Count < (int)popupStringType)
+            {
+                Debug.LogError($"DEBUG: Localized Strings array length is less than provided EPopupStringType number!");
+                return null;
+            }
+
+            return localizedStrings[(int)popupStringType].GetLocalizedString();
+        }
     }
 }

@@ -2,7 +2,8 @@
     "name": "SayItLabs.PopupSystem.Editor",
     "rootNamespace": "",
     "references": [
-        "SayItLabs.PopupSystem"
+        "SayItLabs.PopupSystem",
+        "Unity.Localization"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

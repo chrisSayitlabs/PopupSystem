@@ -1,6 +1,8 @@
 using System;
 using UnityEditor;
+using UnityEngine.Localization;
 using UnityEngine;
+using UnityEditor.Localization.Editor;
 
 namespace SayItLabs.PopupSystem.Editor
 {
@@ -10,8 +12,6 @@ namespace SayItLabs.PopupSystem.Editor
         private float headerHeight = 20f;
         private float widthOffset = -8f;
         GUIStyle Window = null;
-    
-    
     
         public override void OnGUI(Rect rect, SerializedProperty property, GUIContent label)
         {
@@ -41,22 +41,23 @@ namespace SayItLabs.PopupSystem.Editor
                         break;
                     case EPopupType.SimplePopup:
                         EditorGUILayout.LabelField("Main Body");
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("mainBodyText"));
+                        DrawLocalizedStringEntry(EPopupStringType.MainBodyText, property);
                         EditorGUILayout.LabelField("Buttons");
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("singleButtonLabel"));
+                        DrawLocalizedStringEntry(EPopupStringType.SingleButtonLabel, property);
                         break;
                     case EPopupType.YesNoPopup:
                         EditorGUILayout.LabelField("Main Body");
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("mainBodyText"));
+                        DrawLocalizedStringEntry(EPopupStringType.MainBodyText, property);
                         EditorGUILayout.LabelField("Buttons");
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("leftButtonLabel"));
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("rightButtonLabel"));
+                        DrawLocalizedStringEntry(EPopupStringType.LeftButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.RightButtonLabel, property);
                         break;
                     case EPopupType.ParentalGatePopup:
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("mainBodyText"));
-
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("leftButtonLabel"));
-                        EditorGUILayout.PropertyField(property.FindPropertyRelative("rightButtonLabel"));
+                        EditorGUILayout.LabelField("Main Body");
+                        DrawLocalizedStringEntry(EPopupStringType.MainBodyText, property);
+                        EditorGUILayout.LabelField("Buttons");
+                        DrawLocalizedStringEntry(EPopupStringType.LeftButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.RightButtonLabel, property);
                         break;
                 }
     
@@ -64,9 +65,24 @@ namespace SayItLabs.PopupSystem.Editor
             }
         }
 
+        private void DrawLocalizedStringEntry(EPopupStringType popupStringType, SerializedProperty p)
+        {
+            SerializedProperty strArr = p.FindPropertyRelative("localizedStrings");
+            EPopupStringType[] enums = (EPopupStringType[])Enum.GetValues(typeof(EPopupStringType));
+            if (strArr.arraySize < enums.Length)
+                strArr.arraySize = enums.Length;
+
+            EditorGUILayout.PropertyField(strArr.GetArrayElementAtIndex((int)popupStringType), new GUIContent(PopupStringTypeToString(popupStringType)));
+        }
+
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
             return EditorGUIUtility.singleLineHeight * 2f + EditorGUIUtility.standardVerticalSpacing;
+        }
+
+        private string PopupStringTypeToString(EPopupStringType pst)
+        {
+            return System.Text.RegularExpressions.Regex.Replace(pst.ToString(), "([A-Z])", " $1", System.Text.RegularExpressions.RegexOptions.Compiled).Trim();
         }
     }
 }

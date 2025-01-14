@@ -22,7 +22,7 @@ namespace SayItLabs.PopupSystem
 
         public override void InitializePopup(PopupInfo popupInfo)
         {
-            mainBodyTxt.text = popupInfo.MainBodyText.GetLocalizedString();
+            mainBodyTxt.text = popupInfo.GetString(EPopupStringType.MainBodyText);
             inputField.contentType = TMP_InputField.ContentType.IntegerNumber;
             inputFieldPlaceholderText.text = "";
             inputField.text = "";
@@ -31,7 +31,7 @@ namespace SayItLabs.PopupSystem
             {
                 TextMeshProUGUI tmp = confirmButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = popupInfo.LeftButtonLabel.GetLocalizedString();
+                    tmp.text = popupInfo.GetString(EPopupStringType.LeftButtonLabel);
                 confirmButton.onClick.AddListener(() => {
                     if (CheckAnswer())
                         OnPopupConfirmation();
@@ -42,7 +42,7 @@ namespace SayItLabs.PopupSystem
             {
                 TextMeshProUGUI tmp = cancelButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = popupInfo.RightButtonLabel.GetLocalizedString();
+                    tmp.text = popupInfo.GetString(EPopupStringType.RightButtonLabel);
                 cancelButton.onClick.AddListener(() => OnPopupRefuse());
             }
 

@@ -20,13 +20,13 @@ namespace SayItLabs.PopupSystem
 
         public override void InitializePopup(PopupInfo pi)
         {
-            mainBodyTxt.text = pi.MainBodyText.GetLocalizedString();
+            mainBodyTxt.text = pi.GetString(EPopupStringType.MainBodyText);
 
             if (yesButton != null)
             {
                 TextMeshProUGUI tmp = yesButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = pi.LeftButtonLabel.GetLocalizedString();
+                    tmp.text = pi.GetString(EPopupStringType.LeftButtonLabel);
                 yesButton.onClick.AddListener(() => OnPopupConfirmation());
             }
 
@@ -34,7 +34,7 @@ namespace SayItLabs.PopupSystem
             {
                 TextMeshProUGUI tmp = noButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = pi.RightButtonLabel.GetLocalizedString();
+                    tmp.text = pi.GetString(EPopupStringType.RightButtonLabel);
                 noButton.onClick.AddListener(() => OnPopupRefuse());
             }
         }
