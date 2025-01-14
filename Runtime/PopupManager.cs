@@ -23,6 +23,10 @@ namespace SayItLabs.PopupSystem
         [Header("Debug")]
         [SerializeField] private PopupInfo debugPopupInfo;
 
+        //Events
+        public event Action OnPopupChanged;
+        public event Action OnPopupDisappear;
+        //Private vars
         private BasePopup currentActivePopup = default;
         private PopupResult? popupResult;
 
@@ -73,7 +77,7 @@ namespace SayItLabs.PopupSystem
 
             currentActivePopup = Instantiate(popupDatabase[popupInfo.PopupType], transform.parent);
             currentActivePopup.InitializePopup(popupInfo);
-            //InputBlocker.RequestBlock(currentActivePopup.RectTransform);
+            OnPopupChanged?.Invoke();
             popupResult = null;
             currentActivePopup.Show();
         }
@@ -88,7 +92,7 @@ namespace SayItLabs.PopupSystem
 
             currentActivePopup.Hide();
             currentActivePopup = null;
-            //InputBlocker.RemoveBlock();
+            OnPopupDisappear?.Invoke();
         }
 
         private void RecordSuccess()
