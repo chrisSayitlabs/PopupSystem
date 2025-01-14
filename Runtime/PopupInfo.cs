@@ -20,7 +20,7 @@ namespace SayItLabs.PopupSystem
         SingleButtonLabel = 1,
         LeftButtonLabel = 2,
         RightButtonLabel = 3,
-
+        InputFieldPlaceholder = 4
     }
 
     /// <summary>
