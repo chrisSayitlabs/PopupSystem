@@ -10,7 +10,17 @@ namespace SayItLabs.PopupSystem
     {
         None,
         SimplePopup,
-        YesNoPopup
+        YesNoPopup,
+        ParentalGatePopup
+    }
+
+    public enum EPopupStringType : uint
+    {
+        MainBodyText = 0,
+        SingleButtonLabel = 1,
+        LeftButtonLabel = 2,
+        RightButtonLabel = 3,
+
     }
 
     /// <summary>
@@ -33,5 +43,21 @@ namespace SayItLabs.PopupSystem
 
         [SerializeField] private LocalizedString rightButtonLabel;
         public LocalizedString RightButtonLabel { get { return rightButtonLabel; } }
+
+        [SerializeField] private List<LocalizedString> localizedStrings;
+
+        public LocalizedString GetLocalizedStringFor(EPopupStringType pst)
+        {
+            if(localizedStrings == null)
+                return null;
+
+            if ((int)pst < 0)
+                return null;
+
+            if (localizedStrings.Count < (int)pst)
+                return null;
+
+            return localizedStrings[(int)pst];
+        }
     }
 }
