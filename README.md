@@ -25,6 +25,7 @@ If you get errors that the "nl.jeffreylanters.tweens" cannot be found, add a sco
 
 Alternatively, within the Editor you can add a scoped registry by going to Edit> Project Settings> Package Manager and add the following:
 
+![Unity_E6mDSAKprT](https://github.com/user-attachments/assets/068bb5fd-226c-4415-b212-6e707d8b5e57)
 
 
 ## Get Started
