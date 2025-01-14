@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showSimplePopup: {fileID: 2146855855}
   showYesNoPopup: {fileID: 563195016}
-  showParentalGatePopup: {fileID: 0}
+  showParentalGatePopup: {fileID: 757704287}
   outputText: {fileID: 1861015584}
   simplePopup:
     popupType: 1

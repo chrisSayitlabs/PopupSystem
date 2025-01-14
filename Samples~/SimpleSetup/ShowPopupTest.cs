@@ -64,8 +64,8 @@ public class ShowPopuptest : MonoBehaviour
 
     private void ShowParentalGatePopup()
     {
-        PopupManager.Instance?.CreatePopupWindow(yesNoPopup);
-        _ = AwaitYesNoPopupResponse();
+        PopupManager.Instance?.CreatePopupWindow(parentalGatePopup);
+        _ = AwaitParentalGatePopupResponse();
     }
 
     private async Task AwaitParentalGatePopupResponse()

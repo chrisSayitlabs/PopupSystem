@@ -52,12 +52,18 @@ namespace SayItLabs.PopupSystem.Editor
                         EditorGUILayout.PropertyField(property.FindPropertyRelative("leftButtonLabel"));
                         EditorGUILayout.PropertyField(property.FindPropertyRelative("rightButtonLabel"));
                         break;
+                    case EPopupType.ParentalGatePopup:
+                        EditorGUILayout.PropertyField(property.FindPropertyRelative("mainBodyText"));
+
+                        EditorGUILayout.PropertyField(property.FindPropertyRelative("leftButtonLabel"));
+                        EditorGUILayout.PropertyField(property.FindPropertyRelative("rightButtonLabel"));
+                        break;
                 }
     
                 GUILayout.EndVertical();
             }
         }
-    
+
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
             return EditorGUIUtility.singleLineHeight * 2f + EditorGUIUtility.standardVerticalSpacing;
