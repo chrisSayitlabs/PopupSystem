@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using UnityEditor;
 using UnityEngine.Localization;
@@ -86,3 +87,4 @@ namespace SayItLabs.PopupSystem.Editor
         }
     }
 }
+#endif

@@ -2,6 +2,10 @@
 ### Features
 ### Bugfixes
 
+## 0.5.2
+### Bugfixes
+* Fixing issue on build.
+
 ## 0.5.1
 ### Features
 * Adding in events for when popup is shown/hidden
