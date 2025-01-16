@@ -79,9 +79,9 @@ namespace SayItLabs.PopupSystem
                 from = finalActivePosition,
                 to = outTo,
                 duration = outDuration,
-                easeType = outEase
+                easeType = outEase,
+                onEnd = (instance) => Destroy(gameObject)
             });
-            gameObject.SetActive(false);
         }
 
         #region DEBUG
