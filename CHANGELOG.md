@@ -2,6 +2,10 @@
 ### Features
 ### Bugfixes
 
+## 0.5.3
+### Bugfixes
+* Fix for popups not destroying themselves properly
+
 ## 0.5.2
 ### Bugfixes
 * Fixing issue on build.
