@@ -56,5 +56,26 @@ namespace SayItLabs.PopupSystem
 
             return localizedStrings[(int)popupStringType].GetLocalizedString();
         }
+
+        public static PopupInfo CreateSimplePopup(LocalizedString mainBody, LocalizedString buttonLabel)
+        {
+            PopupInfo popupInfo = new PopupInfo();
+            popupInfo.popupType = EPopupType.YesNoPopup;
+            popupInfo.localizedStrings = new List<LocalizedString>((int)EPopupStringType.SingleButtonLabel);
+            popupInfo.localizedStrings[(int)EPopupStringType.MainBodyText] = mainBody;
+            popupInfo.localizedStrings[(int)EPopupStringType.SingleButtonLabel] = buttonLabel;
+            return popupInfo;
+        }
+        
+        public static PopupInfo CreateYesNoPopup(LocalizedString mainBody, LocalizedString leftButtonLabel, LocalizedString rightButtonLabel)
+        {
+            PopupInfo popupInfo = new PopupInfo();
+            popupInfo.popupType = EPopupType.YesNoPopup;
+            popupInfo.localizedStrings = new List<LocalizedString>((int)EPopupStringType.RightButtonLabel);
+            popupInfo.localizedStrings[(int)EPopupStringType.MainBodyText] = mainBody;
+            popupInfo.localizedStrings[(int)EPopupStringType.LeftButtonLabel] = leftButtonLabel;
+            popupInfo.localizedStrings[(int)EPopupStringType.RightButtonLabel] = rightButtonLabel;
+            return popupInfo;
+        }
     }
 }
