@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -61,7 +62,7 @@ namespace SayItLabs.PopupSystem
         {
             PopupInfo popupInfo = new PopupInfo();
             popupInfo.popupType = EPopupType.YesNoPopup;
-            popupInfo.localizedStrings = new List<LocalizedString>((int)EPopupStringType.SingleButtonLabel);
+            popupInfo.localizedStrings = new LocalizedString[(int)EPopupStringType.SingleButtonLabel + 1].ToList();
             popupInfo.localizedStrings[(int)EPopupStringType.MainBodyText] = mainBody;
             popupInfo.localizedStrings[(int)EPopupStringType.SingleButtonLabel] = buttonLabel;
             return popupInfo;
@@ -71,7 +72,7 @@ namespace SayItLabs.PopupSystem
         {
             PopupInfo popupInfo = new PopupInfo();
             popupInfo.popupType = EPopupType.YesNoPopup;
-            popupInfo.localizedStrings = new List<LocalizedString>((int)EPopupStringType.RightButtonLabel);
+            popupInfo.localizedStrings = new LocalizedString[(int)EPopupStringType.RightButtonLabel + 1].ToList();
             popupInfo.localizedStrings[(int)EPopupStringType.MainBodyText] = mainBody;
             popupInfo.localizedStrings[(int)EPopupStringType.LeftButtonLabel] = leftButtonLabel;
             popupInfo.localizedStrings[(int)EPopupStringType.RightButtonLabel] = rightButtonLabel;
