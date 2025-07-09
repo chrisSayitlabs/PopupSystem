@@ -11,7 +11,8 @@ namespace SayItLabs.PopupSystem
         None,
         SimplePopup,
         YesNoPopup,
-        ParentalGatePopup
+        ParentalGatePopup,
+        VisualPopup
     }
 
     public enum EPopupStringType : uint
