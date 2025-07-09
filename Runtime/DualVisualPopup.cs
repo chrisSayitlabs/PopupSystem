@@ -9,14 +9,14 @@ namespace SayItLabs.PopupSystem
     public class DualVisualPopup : BasePopup
     {
         [Header("Images")]
-        [SerializeField] private Image leftSprite;
-        [SerializeField] private Image rightSprite;
+        [SerializeField] private Image firstSprite;
+        [SerializeField] private Image secondSprite;
         [Header("Buttons")]
-        [SerializeField] private Button leftButton;
-        [SerializeField] private Button rightButton;
+        [SerializeField] private Button firstButton;
+        [SerializeField] private Button secondButton;
         public override void InitializePopup(PopupInfo pi)
         {
-            leftSprite.sprite = pi.LeftSprite;
+            firstSprite.sprite = pi.LeftSprite;
             rightSprite.sprite = pi.RightSprite;
 
             if (leftButton != null)
@@ -24,7 +24,7 @@ namespace SayItLabs.PopupSystem
                 TextMeshProUGUI tmp = leftButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
                     tmp.text = pi.GetString(EPopupStringType.LeftButtonLabel);
-                leftButton.onClick.AddListener(() => OnPopupConfirmation());
+                leftButton.onClick.AddListener(() => OnPopupButton1Pressed());
             }
 
             if (rightButton != null)
@@ -32,7 +32,7 @@ namespace SayItLabs.PopupSystem
                 TextMeshProUGUI tmp = rightButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
                     tmp.text = pi.GetString(EPopupStringType.RightButtonLabel);
-                rightButton.onClick.AddListener(() => OnPopupRefuse());
+                rightButton.onClick.AddListener(() => OnPopupButton2Pressed());
             }
         }
     }
