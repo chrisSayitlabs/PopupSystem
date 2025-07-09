@@ -36,6 +36,9 @@ namespace SayItLabs.PopupSystem
 
         [SerializeField] private List<LocalizedString> localizedStrings;
 
+        [SerializeField] private Sprite leftSprite;
+        [SerializeField] private Sprite rightSprite;
+
         public string GetString(EPopupStringType popupStringType)
         {
             if (localizedStrings == null)
@@ -75,6 +78,18 @@ namespace SayItLabs.PopupSystem
             popupInfo.popupType = EPopupType.YesNoPopup;
             popupInfo.localizedStrings = new LocalizedString[(int)EPopupStringType.RightButtonLabel + 1].ToList();
             popupInfo.localizedStrings[(int)EPopupStringType.MainBodyText] = mainBody;
+            popupInfo.localizedStrings[(int)EPopupStringType.LeftButtonLabel] = leftButtonLabel;
+            popupInfo.localizedStrings[(int)EPopupStringType.RightButtonLabel] = rightButtonLabel;
+            return popupInfo;
+        }
+
+        public static PopupInfo CreateDualVisualPopup(Sprite leftSprite, Sprite rightSprite, LocalizedString leftButtonLabel, LocalizedString rightButtonLabel)
+        {
+            PopupInfo popupInfo = new PopupInfo();
+            popupInfo.popupType = EPopupType.DualVisualPopup;
+            popupInfo.leftSprite = leftSprite;
+            popupInfo.rightSprite = rightSprite;
+            popupInfo.localizedStrings = new LocalizedString[(int)EPopupStringType.RightButtonLabel + 1].ToList();
             popupInfo.localizedStrings[(int)EPopupStringType.LeftButtonLabel] = leftButtonLabel;
             popupInfo.localizedStrings[(int)EPopupStringType.RightButtonLabel] = rightButtonLabel;
             return popupInfo;

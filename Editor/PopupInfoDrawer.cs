@@ -60,6 +60,13 @@ namespace SayItLabs.PopupSystem.Editor
                         DrawLocalizedStringEntry(EPopupStringType.LeftButtonLabel, property);
                         DrawLocalizedStringEntry(EPopupStringType.RightButtonLabel, property);
                         break;
+                    case EPopupType.DualVisualPopup:
+                        EditorGUILayout.LabelField("Images");
+
+                        EditorGUILayout.LabelField("Buttons");
+                        DrawLocalizedStringEntry(EPopupStringType.LeftButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.RightButtonLabel, property);
+                        break;
                 }
     
                 GUILayout.EndVertical();
