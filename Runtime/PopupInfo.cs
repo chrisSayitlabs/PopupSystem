@@ -37,7 +37,9 @@ namespace SayItLabs.PopupSystem
         [SerializeField] private List<LocalizedString> localizedStrings;
 
         [SerializeField] private Sprite leftSprite;
+        public Sprite LeftSprite { get { return leftSprite; } }
         [SerializeField] private Sprite rightSprite;
+        public Sprite RightSprite { get { return rightSprite; } }
 
         public string GetString(EPopupStringType popupStringType)
         {
