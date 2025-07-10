@@ -18,7 +18,7 @@
     "samples": [
         {
             "displayName": "Simple Setup",
-            "description": "Contains a simple script showing how to setup the popup system for basic use.git ",
+            "description": "Contains a simple script showing how to setup the popup system for basic use",
             "path": "Samples~/SimpleSetup"
         }
     ]
