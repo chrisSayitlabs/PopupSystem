@@ -3,11 +3,14 @@ namespace SayItLabs.PopupSystem
 {
     public struct PopupResult
     {
-        public readonly bool WasSuccessful;
+        private readonly int buttonPressed;
 
-        public PopupResult(bool wasSuccessful)
+        public bool Button1Pressed { get { return buttonPressed == PopupStatics.BUTTON_1; } }
+        public bool Button2Pressed { get { return buttonPressed == PopupStatics.BUTTON_2; } }
+
+        public PopupResult(int buttonPressed)
         {
-            WasSuccessful = wasSuccessful;
+            this.buttonPressed = buttonPressed;
         }
     }
 }

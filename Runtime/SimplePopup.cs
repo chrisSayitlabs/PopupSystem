@@ -27,7 +27,7 @@ namespace SayItLabs.PopupSystem
                 TextMeshProUGUI tmp = confirmButton.GetComponentInChildren<TextMeshProUGUI>();
                 if(tmp!=null)
                     tmp.text = pi.GetString(EPopupStringType.SingleButtonLabel);
-                confirmButton.onClick.AddListener(() => OnPopupConfirmation());
+                confirmButton.onClick.AddListener(() => OnPopupButton1Pressed());
             }
         }
     }

@@ -26,16 +26,16 @@ namespace SayItLabs.PopupSystem
             {
                 TextMeshProUGUI tmp = yesButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = pi.GetString(EPopupStringType.LeftButtonLabel);
-                yesButton.onClick.AddListener(() => OnPopupConfirmation());
+                    tmp.text = pi.GetString(EPopupStringType.FirstButtonLabel);
+                yesButton.onClick.AddListener(() => OnPopupButton1Pressed());
             }
 
             if (noButton != null)
             {
                 TextMeshProUGUI tmp = noButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = pi.GetString(EPopupStringType.RightButtonLabel);
-                noButton.onClick.AddListener(() => OnPopupRefuse());
+                    tmp.text = pi.GetString(EPopupStringType.SecondButtonLabel);
+                noButton.onClick.AddListener(() => OnPopupButton2Pressed());
             }
         }
     }

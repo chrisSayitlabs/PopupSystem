@@ -50,22 +50,22 @@ namespace SayItLabs.PopupSystem.Editor
                         EditorGUILayout.LabelField("Main Body");
                         DrawLocalizedStringEntry(EPopupStringType.MainBodyText, property);
                         EditorGUILayout.LabelField("Buttons");
-                        DrawLocalizedStringEntry(EPopupStringType.LeftButtonLabel, property);
-                        DrawLocalizedStringEntry(EPopupStringType.RightButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.FirstButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.SecondButtonLabel, property);
                         break;
                     case EPopupType.ParentalGatePopup:
                         EditorGUILayout.LabelField("Main Body");
                         DrawLocalizedStringEntry(EPopupStringType.MainBodyText, property);
                         EditorGUILayout.LabelField("Buttons");
-                        DrawLocalizedStringEntry(EPopupStringType.LeftButtonLabel, property);
-                        DrawLocalizedStringEntry(EPopupStringType.RightButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.FirstButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.SecondButtonLabel, property);
                         break;
                     case EPopupType.DualVisualPopup:
                         EditorGUILayout.LabelField("Images");
 
                         EditorGUILayout.LabelField("Buttons");
-                        DrawLocalizedStringEntry(EPopupStringType.LeftButtonLabel, property);
-                        DrawLocalizedStringEntry(EPopupStringType.RightButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.FirstButtonLabel, property);
+                        DrawLocalizedStringEntry(EPopupStringType.SecondButtonLabel, property);
                         break;
                 }
     

@@ -31,10 +31,10 @@ namespace SayItLabs.PopupSystem
             {
                 TextMeshProUGUI tmp = confirmButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = popupInfo.GetString(EPopupStringType.LeftButtonLabel);
+                    tmp.text = popupInfo.GetString(EPopupStringType.FirstButtonLabel);
                 confirmButton.onClick.AddListener(() => {
                     if (CheckAnswer())
-                        OnPopupConfirmation();
+                        OnPopupButton1Pressed();
                 });
             }
 
@@ -42,8 +42,8 @@ namespace SayItLabs.PopupSystem
             {
                 TextMeshProUGUI tmp = cancelButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = popupInfo.GetString(EPopupStringType.RightButtonLabel);
-                cancelButton.onClick.AddListener(() => OnPopupRefuse());
+                    tmp.text = popupInfo.GetString(EPopupStringType.SecondButtonLabel);
+                cancelButton.onClick.AddListener(() => OnPopupButton2Pressed());
             }
 
             GenerateQuery();

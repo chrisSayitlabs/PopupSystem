@@ -16,23 +16,23 @@ namespace SayItLabs.PopupSystem
         [SerializeField] private Button secondButton;
         public override void InitializePopup(PopupInfo pi)
         {
-            firstSprite.sprite = pi.LeftSprite;
-            rightSprite.sprite = pi.RightSprite;
+            firstSprite.sprite = pi.FirstSprite;
+            secondSprite.sprite = pi.SecondSprite;
 
-            if (leftButton != null)
+            if (firstButton != null)
             {
-                TextMeshProUGUI tmp = leftButton.GetComponentInChildren<TextMeshProUGUI>();
+                TextMeshProUGUI tmp = firstButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = pi.GetString(EPopupStringType.LeftButtonLabel);
-                leftButton.onClick.AddListener(() => OnPopupButton1Pressed());
+                    tmp.text = pi.GetString(EPopupStringType.FirstButtonLabel);
+                firstButton.onClick.AddListener(() => OnPopupButton1Pressed());
             }
 
-            if (rightButton != null)
+            if (secondButton != null)
             {
-                TextMeshProUGUI tmp = rightButton.GetComponentInChildren<TextMeshProUGUI>();
+                TextMeshProUGUI tmp = secondButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
-                    tmp.text = pi.GetString(EPopupStringType.RightButtonLabel);
-                rightButton.onClick.AddListener(() => OnPopupButton2Pressed());
+                    tmp.text = pi.GetString(EPopupStringType.SecondButtonLabel);
+                secondButton.onClick.AddListener(() => OnPopupButton2Pressed());
             }
         }
     }

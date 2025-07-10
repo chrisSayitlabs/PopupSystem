@@ -45,10 +45,10 @@ namespace SayItLabs.PopupSystem
             popupDatabase.Add(EPopupType.YesNoPopup, yesNoPopup);
             popupDatabase.Add(EPopupType.ParentalGatePopup, parentalGatePopup);
 
-            BasePopup.OnPopupConfirmation += ClosePopup;
-            BasePopup.OnPopupConfirmation += RecordSuccess;
-            BasePopup.OnPopupRefuse += ClosePopup;
-            BasePopup.OnPopupRefuse += RecordRefusal;
+            BasePopup.OnPopupButton1Pressed += ClosePopup;
+            BasePopup.OnPopupButton1Pressed += RecordButton1Pressed;
+            BasePopup.OnPopupButton2Pressed += ClosePopup;
+            BasePopup.OnPopupButton2Pressed += RecordButton2Pressed;
 
             currentActivePopup = null;
 
@@ -95,14 +95,14 @@ namespace SayItLabs.PopupSystem
             OnPopupDisappear?.Invoke();
         }
 
-        private void RecordSuccess()
+        private void RecordButton1Pressed()
         {
-            popupResult = new PopupResult(true);
+            popupResult = new PopupResult(PopupStatics.BUTTON_1);
         }
 
-        private void RecordRefusal()
+        private void RecordButton2Pressed()
         {
-            popupResult = new PopupResult(false);
+            popupResult = new PopupResult(PopupStatics.BUTTON_2);
         }
 
         public async Task<PopupResult> AwaitInput()

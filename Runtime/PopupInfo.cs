@@ -19,8 +19,8 @@ namespace SayItLabs.PopupSystem
     {
         MainBodyText = 0,
         SingleButtonLabel = 1,
-        LeftButtonLabel = 2,
-        RightButtonLabel = 3,
+        FirstButtonLabel = 2,
+        SecondButtonLabel = 3,
         InputFieldPlaceholder = 4
     }
 
@@ -36,10 +36,10 @@ namespace SayItLabs.PopupSystem
 
         [SerializeField] private List<LocalizedString> localizedStrings;
 
-        [SerializeField] private Sprite leftSprite;
-        public Sprite LeftSprite { get { return leftSprite; } }
-        [SerializeField] private Sprite rightSprite;
-        public Sprite RightSprite { get { return rightSprite; } }
+        [SerializeField] private Sprite firstSprite;
+        public Sprite FirstSprite { get { return firstSprite; } }
+        [SerializeField] private Sprite secondSprite;
+        public Sprite SecondSprite { get { return secondSprite; } }
 
         public string GetString(EPopupStringType popupStringType)
         {
@@ -78,22 +78,22 @@ namespace SayItLabs.PopupSystem
         {
             PopupInfo popupInfo = new PopupInfo();
             popupInfo.popupType = EPopupType.YesNoPopup;
-            popupInfo.localizedStrings = new LocalizedString[(int)EPopupStringType.RightButtonLabel + 1].ToList();
+            popupInfo.localizedStrings = new LocalizedString[(int)EPopupStringType.SecondButtonLabel + 1].ToList();
             popupInfo.localizedStrings[(int)EPopupStringType.MainBodyText] = mainBody;
-            popupInfo.localizedStrings[(int)EPopupStringType.LeftButtonLabel] = leftButtonLabel;
-            popupInfo.localizedStrings[(int)EPopupStringType.RightButtonLabel] = rightButtonLabel;
+            popupInfo.localizedStrings[(int)EPopupStringType.FirstButtonLabel] = leftButtonLabel;
+            popupInfo.localizedStrings[(int)EPopupStringType.SecondButtonLabel] = rightButtonLabel;
             return popupInfo;
         }
 
-        public static PopupInfo CreateDualVisualPopup(Sprite leftSprite, Sprite rightSprite, LocalizedString leftButtonLabel, LocalizedString rightButtonLabel)
+        public static PopupInfo CreateDualVisualPopup(Sprite firstSprite, Sprite secondSprite, LocalizedString firstButtonLabel, LocalizedString secondButtonLabel)
         {
             PopupInfo popupInfo = new PopupInfo();
             popupInfo.popupType = EPopupType.DualVisualPopup;
-            popupInfo.leftSprite = leftSprite;
-            popupInfo.rightSprite = rightSprite;
-            popupInfo.localizedStrings = new LocalizedString[(int)EPopupStringType.RightButtonLabel + 1].ToList();
-            popupInfo.localizedStrings[(int)EPopupStringType.LeftButtonLabel] = leftButtonLabel;
-            popupInfo.localizedStrings[(int)EPopupStringType.RightButtonLabel] = rightButtonLabel;
+            popupInfo.firstSprite = firstSprite;
+            popupInfo.secondSprite = secondSprite;
+            popupInfo.localizedStrings = new LocalizedString[(int)EPopupStringType.SecondButtonLabel + 1].ToList();
+            popupInfo.localizedStrings[(int)EPopupStringType.FirstButtonLabel] = firstButtonLabel;
+            popupInfo.localizedStrings[(int)EPopupStringType.SecondButtonLabel] = secondButtonLabel;
             return popupInfo;
         }
     }

@@ -29,24 +29,24 @@ namespace SayItLabs.PopupSystem
 
         public RectTransform RectTransform { get; private set; }
 
-        public static Action OnPopupConfirmation;
-        public static Action OnPopupRefuse;
+        public static Action OnPopupButton1Pressed;
+        public static Action OnPopupButton2Pressed;
 
         private void Awake()
         {
             RectTransform = GetComponent<RectTransform>();
 
 #if UNITY_EDITOR
-            OnPopupConfirmation += LogConfirmation;
-            OnPopupRefuse += logRefuse;
+            OnPopupButton1Pressed += LogButton1Pressed;
+            OnPopupButton2Pressed += LogButton2Pressed;
 #endif
         }
 
         private void OnDestroy()
         {
 #if UNITY_EDITOR
-            OnPopupConfirmation -= LogConfirmation;
-            OnPopupRefuse -= logRefuse;
+            OnPopupButton1Pressed -= LogButton1Pressed;
+            OnPopupButton2Pressed -= LogButton2Pressed;
 #endif
         }
 
@@ -86,14 +86,14 @@ namespace SayItLabs.PopupSystem
 
         #region DEBUG
 #if UNITY_EDITOR
-        private void LogConfirmation()
+        private void LogButton1Pressed()
         {
-            Debug.Log($"DEBUG: Popup Confirmed");
+            Debug.Log($"DEBUG: Popup Button 1 pressed.");
         }
 
-        private void logRefuse()
+        private void LogButton2Pressed()
         {
-            Debug.Log($"DEBUG: Popup Refused");
+            Debug.Log($"DEBUG: Popup Popup Button 2 pressed.");
         }
 #endif
         #endregion
