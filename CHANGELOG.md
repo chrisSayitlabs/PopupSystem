@@ -1,8 +1,9 @@
-## Unreleased
-
+## 0.6.1
 ### Features
+* Adding in ability to have clickable images in DualVisualPopups.
 
 ### Bugfixes
+* Fixed typing on PopupManager.cs for DualVisualPopup.
 
 ## 0.6.0
 
