@@ -19,6 +19,7 @@ namespace SayItLabs.PopupSystem
         [SerializeField] private SimplePopup simplePopup;
         [SerializeField] private YesNoPopup yesNoPopup;
         [SerializeField] private ParentGatePopup parentalGatePopup;
+        [SerializeField] private ParentGatePopup dualVisualPopup;
 
         [Header("Debug")]
         [SerializeField] private PopupInfo debugPopupInfo;
@@ -44,6 +45,7 @@ namespace SayItLabs.PopupSystem
             popupDatabase.Add(EPopupType.SimplePopup, simplePopup);
             popupDatabase.Add(EPopupType.YesNoPopup, yesNoPopup);
             popupDatabase.Add(EPopupType.ParentalGatePopup, parentalGatePopup);
+            popupDatabase.Add(EPopupType.DualVisualPopup, dualVisualPopup);
 
             BasePopup.OnPopupButton1Pressed += ClosePopup;
             BasePopup.OnPopupButton1Pressed += RecordButton1Pressed;

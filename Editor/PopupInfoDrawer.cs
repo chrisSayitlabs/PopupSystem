@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine.Localization;
 using UnityEngine;
 using UnityEditor.Localization.Editor;
+using Codice.Client.BaseCommands.BranchExplorer;
 
 namespace SayItLabs.PopupSystem.Editor
 {
@@ -28,12 +29,11 @@ namespace SayItLabs.PopupSystem.Editor
                 int indent = EditorGUI.indentLevel;
                 EditorGUI.indentLevel = 0;
                 
-                Rect headerRect = EditorGUI.IndentedRect(rect);
-                headerRect.width = headerRect.width + widthOffset;
-                headerRect.height = headerHeight;
+                //Rect headerRect = EditorGUI.IndentedRect(rect);
+                //headerRect.width = headerRect.width + widthOffset;
+                //headerRect.height = headerHeight;
                 GUILayout.BeginVertical(label, Window);
                 EditorGUILayout.PropertyField(popupTypeProp);
-    
                 EPopupType[] enums = (EPopupType[])Enum.GetValues(typeof(EPopupType));
                 EPopupType typeSelected = enums[popupTypeProp.enumValueIndex];
                 switch(typeSelected)
@@ -62,7 +62,8 @@ namespace SayItLabs.PopupSystem.Editor
                         break;
                     case EPopupType.DualVisualPopup:
                         EditorGUILayout.LabelField("Images");
-
+                        EditorGUILayout.PropertyField(property.FindPropertyRelative("firstSprite"));
+                        EditorGUILayout.PropertyField(property.FindPropertyRelative("secondSprite"));
                         EditorGUILayout.LabelField("Buttons");
                         DrawLocalizedStringEntry(EPopupStringType.FirstButtonLabel, property);
                         DrawLocalizedStringEntry(EPopupStringType.SecondButtonLabel, property);
@@ -85,7 +86,7 @@ namespace SayItLabs.PopupSystem.Editor
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            return EditorGUIUtility.singleLineHeight * 2f + EditorGUIUtility.standardVerticalSpacing;
+            return 0f;
         }
 
         private string PopupStringTypeToString(EPopupStringType pst)
