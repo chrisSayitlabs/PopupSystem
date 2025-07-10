@@ -25,7 +25,7 @@ namespace SayItLabs.PopupSystem
         [SerializeField] private PopupInfo debugPopupInfo;
 
         //Events
-        public event Action OnPopupChanged;
+        public event Action<BasePopup> OnPopupChanged;
         public event Action OnPopupDisappear;
         //Private vars
         private BasePopup currentActivePopup = default;
@@ -79,7 +79,7 @@ namespace SayItLabs.PopupSystem
 
             currentActivePopup = Instantiate(popupDatabase[popupInfo.PopupType], transform.parent);
             currentActivePopup.InitializePopup(popupInfo);
-            OnPopupChanged?.Invoke();
+            OnPopupChanged?.Invoke(currentActivePopup);
             popupResult = null;
             currentActivePopup.Show();
         }
