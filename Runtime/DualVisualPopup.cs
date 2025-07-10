@@ -9,6 +9,7 @@ namespace SayItLabs.PopupSystem
     public class DualVisualPopup : BasePopup
     {
         [Header("Images")]
+        [SerializeField] private bool enableClickOnImage;
         [SerializeField] private Image firstSprite;
         [SerializeField] private Image secondSprite;
         [Header("Buttons")]
@@ -33,6 +34,18 @@ namespace SayItLabs.PopupSystem
                 if (tmp != null)
                     tmp.text = pi.GetString(EPopupStringType.SecondButtonLabel);
                 secondButton.onClick.AddListener(() => OnPopupButton2Pressed());
+            }
+
+            if(firstSprite != null)
+            {
+                Button b = firstSprite.gameObject.AddComponent<Button>();
+                b.onClick.AddListener(() => OnPopupButton1Pressed());
+            }
+
+            if (secondSprite != null)
+            {
+                Button b = secondSprite.gameObject.AddComponent<Button>();
+                b.onClick.AddListener(() => OnPopupButton2Pressed());
             }
         }
     }
