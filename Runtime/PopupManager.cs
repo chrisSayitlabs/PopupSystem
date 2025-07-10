@@ -19,7 +19,7 @@ namespace SayItLabs.PopupSystem
         [SerializeField] private SimplePopup simplePopup;
         [SerializeField] private YesNoPopup yesNoPopup;
         [SerializeField] private ParentGatePopup parentalGatePopup;
-        [SerializeField] private ParentGatePopup dualVisualPopup;
+        [SerializeField] private DualVisualPopup dualVisualPopup;
 
         [Header("Debug")]
         [SerializeField] private PopupInfo debugPopupInfo;
