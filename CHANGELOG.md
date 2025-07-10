@@ -2,6 +2,11 @@
 ### Features
 ### Bugfixes
 
+## 0.6
+### Features
+* Added in Dual Visual Popup
+* Refactored parts of the code to use better language for different contexts of popups
+
 ## 0.5.3
 ### Bugfixes
 * Fix for popups not destroying themselves properly
