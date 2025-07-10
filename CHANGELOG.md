@@ -1,3 +1,7 @@
+## 0.6.2
+### Bugfixes
+* Passing the current popup through OnPopupChanged for responding directly to it now.
+
 ## 0.6.1
 ### Features
 * Adding in ability to have clickable images in DualVisualPopups.
