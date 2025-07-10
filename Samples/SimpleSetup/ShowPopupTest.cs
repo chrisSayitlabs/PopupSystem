@@ -57,7 +57,7 @@ public class ShowPopuptest : MonoBehaviour
     private async Task AwaitYesNoPopupResponse()
     {
         PopupResult result = await PopupManager.Instance.AwaitInput();
-        outputText.text = result.WasSuccessful ? "Yes was pressed!" : "No was pressed!";
+        outputText.text = result.Button1Pressed ? "Yes was pressed!" : "No was pressed!";
         await Task.Delay(1000);
         outputText.text = "";
     }
@@ -71,7 +71,7 @@ public class ShowPopuptest : MonoBehaviour
     private async Task AwaitParentalGatePopupResponse()
     {
         PopupResult result = await PopupManager.Instance.AwaitInput();
-        outputText.text = result.WasSuccessful ? "Yes was pressed!" : "No was pressed!";
+        outputText.text = result.Button1Pressed ? "Yes was pressed!" : "No was pressed!";
         await Task.Delay(1000);
         outputText.text = "";
     }
