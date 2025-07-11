@@ -1,3 +1,7 @@
+## 0.6.3
+### Bugfixes
+* Now properly checking for button first before returning in Dual Visual popup
+
 ## 0.6.2
 ### Bugfixes
 * Passing the current popup through OnPopupChanged for responding directly to it now.
