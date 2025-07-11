@@ -1,3 +1,7 @@
+## 0.6.4
+### Features
+* Added new GetLocalizedString() function for PopupInfo class.
+
 ## 0.6.3
 ### Bugfixes
 * Now properly checking for button first before returning in Dual Visual popup

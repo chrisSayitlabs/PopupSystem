@@ -1,6 +1,6 @@
 {
     "name": "com.sayitlabs.popupsystem",
-    "version": "0.6.3",
+    "version": "0.6.4",
     "displayname": "Say It Labs Popup System",
     "description": "Simple popup system framework for use in different projects.",
     "unity": "2022.3",
