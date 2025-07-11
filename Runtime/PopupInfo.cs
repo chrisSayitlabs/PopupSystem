@@ -41,7 +41,7 @@ namespace SayItLabs.PopupSystem
         [SerializeField] private Sprite secondSprite;
         public Sprite SecondSprite { get { return secondSprite; } }
 
-        public string GetString(EPopupStringType popupStringType)
+        public LocalizedString GetLocalizedString(EPopupStringType popupStringType)
         {
             if (localizedStrings == null)
             {
@@ -49,19 +49,24 @@ namespace SayItLabs.PopupSystem
                 return null;
             }
 
-            if(localizedStrings.Count == 0)
+            if (localizedStrings.Count == 0)
             {
                 Debug.LogError($"DEBUG: Localizes Strings array length is 0!");
                 return null;
             }
 
-            if(localizedStrings.Count < (int)popupStringType)
+            if (localizedStrings.Count < (int)popupStringType)
             {
                 Debug.LogError($"DEBUG: Localized Strings array length is less than provided EPopupStringType number!");
                 return null;
             }
 
-            return localizedStrings[(int)popupStringType].GetLocalizedString();
+            return localizedStrings[(int)popupStringType];
+        }
+
+        public string GetString(EPopupStringType popupStringType)
+        {
+            return GetLocalizedString(popupStringType).GetLocalizedString();
         }
 
         public static PopupInfo CreateSimplePopup(LocalizedString mainBody, LocalizedString buttonLabel)
