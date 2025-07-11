@@ -36,16 +36,23 @@ namespace SayItLabs.PopupSystem
                 secondButton.onClick.AddListener(() => OnPopupButton2Pressed());
             }
 
-            if(firstSprite != null)
+            if(enableClickOnImage)
             {
-                Button b = firstSprite.gameObject.AddComponent<Button>();
-                b.onClick.AddListener(() => OnPopupButton1Pressed());
-            }
+                if (firstSprite != null)
+                {
+                    Button b = firstSprite.gameObject.GetComponent<Button>();
+                    if (b == null)
+                        b = firstSprite.gameObject.AddComponent<Button>();
+                    b.onClick.AddListener(() => OnPopupButton1Pressed());
+                }
 
-            if (secondSprite != null)
-            {
-                Button b = secondSprite.gameObject.AddComponent<Button>();
-                b.onClick.AddListener(() => OnPopupButton2Pressed());
+                if (secondSprite != null)
+                {
+                    Button b = secondSprite.gameObject.GetComponent<Button>();
+                    if(b == null)
+                        b = secondSprite.gameObject.AddComponent<Button>();
+                    b.onClick.AddListener(() => OnPopupButton2Pressed());
+                }
             }
         }
     }
